@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 0.9375rem;
+  font-size: clamp(0.9375rem, 0.885rem + 0.26249999999999996vw, 1.2rem);
+}
+
+:is(p, h1, a) {
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
+  padding-top: 2rem;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+.menu {
+  background-color: burlywood;
+  width: 50%;
+  border-radius: 15px;
+  padding: 15px;
+}
+
+header :is(h1) {
+  font-family: Impact, serif;
+}
+
+header :is(p) {
+  font-size: 18px;
+  line-height: 30px;
+  padding-bottom: 10px;
+}
+
+main h1 {
+  padding-top: 10px;
+}
+
+.item {
+  display: flex;
+  flex-wrap: wrap;
+  flex-shrink: 1;
+  justify-content: space-between;
+}
+.drink {
+  text-align: left;
+  flex-shrink: 5;
+}
+
+.price {
+  text-align: right;
+}
+
+footer {
+  padding-top: 20px;
+}
+
+footer div p {
+  line-height: 30px;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+}
+
+hr {
+  background-color: brown;
+  border-color: brown;
+  height: 5px;
+  border-radius: 4px;
+}
+
+a {
+  color: black;
+}
+
+a:hover {
+  color: brown;
+}
+
+a:visited {
+  color: black;
+}
+
+a:active {
+  color: brown;
+}

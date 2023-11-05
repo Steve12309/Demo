@@ -1,0 +1,124 @@
+/*Reset Style*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5px;
+}
+
+.item1 {
+  border: 3px solid black;
+  padding: 0 20px 20px 20px;
+  line-height: 1.5;
+  letter-spacing: 1.5px;
+  margin: 20px;
+  width: 500px;
+}
+/*Second Solution For Reponsive Screen*/
+/* .item1 {
+  margin: 20px auto;
+}
+ */
+
+/*Second Solution For Reponsive Screen*/
+@media screen and (max-width: 500px) {
+  .item1 {
+    width: 100%;
+    word-wrap: break-word;
+  }
+}
+
+.space {
+  display: flex;
+  flex-shrink: 1;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/*Head Style*/
+.head-container h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.head-container--extra div {
+  font-size: 1.3rem;
+}
+
+.head-container--extra .space p {
+  font-weight: 900;
+  font-size: 1.6rem;
+}
+
+.first-hr {
+  height: 15px;
+  background-color: black;
+  border: none;
+  margin-bottom: 3px;
+  margin-top: 3px;
+}
+
+/*Main Style*/
+.top-info {
+  font-size: 1.3rem;
+  font-weight: 900;
+}
+
+.top-info .space p {
+  font-size: 2rem;
+}
+
+.second-hr {
+  border: none;
+  height: 10px;
+  background-color: black;
+  margin-bottom: 3px;
+}
+
+.right {
+  text-align: right;
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+
+.bold {
+  font-weight: 900;
+}
+
+.third-hr {
+  border: none;
+  background-color: black;
+  height: 15px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.fourth-hr {
+  border: none;
+  background-color: black;
+  height: 10px;
+  margin-bottom: 3px;
+}
+
+.margin {
+  margin-left: 20px;
+}
+
+.special-margin {
+  margin-left: 40px;
+}
+
+/*Foot Sytle*/
+.limited {
+  font-size: 0.6rem;
+  text-align: left;
+  padding: 10px;
+  text-indent: -8px;
+}
