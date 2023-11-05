@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="../css/contactstyle.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <a href="#" class="header-container--nav-container---nav">
+          <aabr
+            title="Hello this is my nickname"
+            class="header-container--nav-container---title"
+            >Steve.</aabr
+          >
+        </a>
+        <span class="header-container--nav-container">
+          <a
+            href="../html/home.html"
+            class="header-container--nav-container---nav"
+            >Home</a
+          >
+          <a
+            href="../html/about.html"
+            class="header-container--nav-container---nav"
+            >About</a
+          >
+          <a
+            href="../html/contact.html"
+            class="header-container--nav-container---nav"
+            >Contact</a
+          >
+        </span>
+      </div>
+    </header>
+
+    <main>
+      <div class="main-container">
+        <fieldset>
+          <legend>Contact Information Form</legend>
+          <form
+            action="../html/contact-submit.html"
+            class="main-container--form-contaier"
+          >
+            <div class="main-container--form-container---input1">
+              <label for="Email">Your email:</label><br />
+              <input
+                type="email"
+                id="Email"
+                name="email"
+                placeholder="abc@gmail.com"
+                required
+              /><br />
+            </div>
+
+            <div class="main-container--form-container---input2">
+              <label for="Method">What method you want to contact me?</label
+              ><br />
+              <select name="method" id="Method">
+                <option value=" "></option>
+                <option value="facebook">Facebook</option>
+                <option value="gmail">Gmail</option>
+                <option value="phone-number">Phone</option></select
+              ><br />
+            </div>
+
+            <div class="main-container--form-container---input3">
+              <label for="Text">Write something about you:</label><br />
+              <textarea
+                name="text"
+                id="Test"
+                cols="30"
+                rows="10"
+                placeholder="Hello..."
+                maxlength="1000"
+                required
+              ></textarea
+              ><br />
+            </div>
+
+            <div class="main-container--form-container---input4">
+              <label for="Choice">What topic do you want to talk with me?</label
+              ><br />
+              <input type="radio" name="choice" id="Choice" required />Games
+              <br />
+              <input type="radio" name="choice" id="Choice" required />Homework
+              <br />
+              <input type="radio" name="choice" id="Choice" required />IT
+              <br />
+              <input type="radio" name="choice" id="Choice" required />Food
+              <br />
+              <input type="radio" name="choice" id="Choice" required />Else
+              <br />
+            </div>
+
+            <button
+              type="submit"
+              formtarget="_blank"
+              class="main-container--form-contaier---btn"
+            >
+              Submit
+            </button>
+          </form>
+        </fieldset>
+      </div>
+    </main>
+  </body>
+</html>

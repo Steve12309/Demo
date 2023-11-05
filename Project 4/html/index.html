@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Survey-Form</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div class="head-container">
+        <div>
+          <h1>freeCodeCamp Survey Form</h1>
+        </div>
+        <div>
+          <p>Thank you for taking the time to help us improve the platform</p>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <form action="Get">
+        <div class="main--form-container">
+          <article>
+            <div class="personal-info">
+              <div>
+                <div>
+                  <label for="Name">Name</label>
+                </div>
+                <div>
+                  <input type="text" name="name" id="Name" value="" placeholder="Enter your name" required>
+                </div>
+              </div>
+
+              <div>
+                <div>
+                  <label for="Name">Email</label>
+                </div>
+                <div>
+                  <input type="text" name="email" id="Email" value="" placeholder="Enter your Email" required>
+                </div>
+              </div>
+
+              <div>
+                <div>
+                  <label for="Name">Age (optional)</label>
+                </div>
+                <div>
+                  <input type="number" name="age" id="Age" value="" min="10" max="99" placeholder="Age" required>
+                </div>
+              </div>
+
+              <div>
+                <div>
+                  <label for="Role">Which option best describes your current role?</label>
+                </div>
+                <select name="role" id="Role">
+                  <option value="" disabled>Select current role</option>
+
+                  <option value="">Student</option>
+
+                  <option value="">Full Time Job</option>
+
+                  <option value="">Full Time Learner</option>
+
+                  <option value="">Prefer not to say</option>
+
+                  <option value="">Other</option>
+                </select>
+              </div>
+
+              <div>
+                <div>
+                  <label for="Recommend">What is your favorite feature of freeCodeCamp?</label>
+                  <div>
+                    <div>
+                      <input type="radio" name="recommend" id="Recommend" value="" checked>Definitely
+                    </div>
+                    <div>
+                      <input type="radio" name="recommend" id="Recommend" value="">Maybe
+                    </div>
+                    <div>
+                      <input type="radio" name="recommend" id="Recommend" value="">Not sure
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <div>
+                  <label for="Feature"></label>
+                </div>
+                <div>
+                  <select name="feature" id="Feature">
+                    <option value="" disabled selected>Select an option</option>
+
+                    <option value="">Challenges</option>
+
+                    <option value="">Projects</option>
+
+                    <option value="">Community</option>
+
+                    <option value="">Open Source</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article>
+            <div class="personal-suggestion">
+              <div>
+                <label for="Improve">What would you like to see improved? (Check all that apply)</label>
+              </div>
+              <div>
+                <div><input type="checkbox" name="improve" id="Improve" value="">Front-end Projects</div>
+
+                <div><input type="checkbox" name="improve" id="Improve" value="">Back-end Projects</div>
+
+                <div><input type="checkbox" name="improve" id="Improve" value="">Data Visualization</div>
+
+                <div><input type="checkbox" name="improve" id="Improve" value="">Challenges</div>
+
+                <div><input type="checkbox" name="improve" id="Improve" value="">Open Source Community</div>
+
+                <div><input type="checkbox" name="improve" id="Improve" value="">Gitter help rooms</div>
+
+                <div><input type="checkbox" name="improve" id="Improve" value="">Videos</div>
+
+                <div><input type="checkbox" name="improve" id="Improve" value="">City Meetups</div>
+
+                <div><input type="checkbox" name="improve" id="Improve" value="">Wiki</div>
+
+                <div><input type="checkbox" name="improve" id="Improve" value="">Forum</div>
+
+                <div><input type="checkbox" name="improve" id="Improve" value="">Additional Courses</div>
+              </div>
+
+              <div>
+                <div>
+                  <label for="Comment">Any comments or suggestions?</label>
+                </div>
+                <div>
+                  <textarea name="comment" id="Comment" cols="30" rows="10"
+                    placeholder="Enter your comment here..."></textarea>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </form>
+    </main>
+
+    <footer>
+      <div class="foot-container">
+        <button class="button">Submit</button>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>

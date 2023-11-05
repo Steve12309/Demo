@@ -1,0 +1,114 @@
+/*Reset Style*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: -apple-sysem;
+}
+
+.body-container {
+  background-color: #eeeeee;
+  margin: 30px 20px 30px 20px;
+  border-radius: 10px;
+}
+
+/*Header Style*/
+.header {
+  text-align: center;
+  line-height: 30px;
+  letter-spacing: 1px;
+  font-size: 1.1rem;
+}
+
+.header h1 {
+  padding: 60px 0 20px 0;
+}
+
+.header p {
+  padding: 10px 0 30px 0;
+}
+
+.picture {
+  display: flex;
+  justify-content: center;
+  background-color: #eeeeee;
+  margin: 0 20px 0 20px;
+  padding: 20px;
+}
+
+.picture figcaption {
+  padding: 30px;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.picture img {
+  width: 100%;
+  position: relative;
+  left: -20px;
+}
+
+/*Main Style*/
+.main-container {
+  margin: 55px;
+  text-align: center;
+}
+
+.head-timeline {
+  padding: 0 0 20px 0;
+}
+
+.timeline ul {
+  text-align: left;
+  max-width: 550px;
+  padding: 0 0 20px 0;
+  line-height: 20px;
+  letter-spacing: 1px;
+  font-size: 1.1rem;
+}
+
+.timeline-list {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.timeline div {
+  padding-bottom: 10px;
+}
+
+.extra-info {
+  text-align: center;
+  font-style: italic;
+  letter-spacing: 1px;
+}
+
+.extra-info div {
+  max-width: 550px;
+  font-size: 1.2rem;
+  margin: auto;
+  text-align: left;
+}
+
+/*Foot Style*/
+footer {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+footer div {
+  font-size: 1.5rem;
+}
+
+footer div p {
+  font-weight: 700;
+}
+
+a:visited {
+  color: #74638f;
+}
+
+footer div a {
+  color: #74638f;
+}
