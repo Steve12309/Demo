@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S-R-P Game</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+</script>
+
+<body>
+    <div class="audio-container">
+        <audio autoplay loop>
+            <source src="../audio/GameMusic.ogg" type="audio/ogg">
+            <source src="../audio/GameMusic.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+    <div class="container">
+        <div class="bubbles">
+            <span style="--i:11"></span>
+            <span style="--i:12"></span>
+            <span style="--i:24"></span>
+            <span style="--i:10"></span>
+            <span style="--i:14"></span>
+            <span style="--i:23"></span>
+            <span style="--i:18"></span>
+            <span style="--i:16"></span>
+            <span style="--i:19"></span>
+            <span style="--i:20"></span>
+            <span style="--i:22"></span>
+            <span style="--i:25"></span>
+            <span style="--i:18"></span>
+            <span style="--i:21"></span>
+            <span style="--i:15"></span>
+            <span style="--i:13"></span>
+            <span style="--i:26"></span>
+            <span style="--i:17"></span>
+            <span style="--i:13"></span>
+            <span style="--i:29"></span>
+            <span style="--i:13"></span>
+            <span style="--i:11"></span>
+            <span style="--i:23"></span>
+            <span style="--i:4"></span>
+            <span style="--i:9"></span>
+            <span style="--i:26"></span>
+            <span style="--i:16"></span>
+            <span style="--i:36"></span>
+            <span style="--i:3"></span>
+            <span style="--i:10"></span>
+            <span style="--i:4"></span>
+            <span style="--i:5"></span>
+            <span style="--i:18"></span>
+            <span style="--i:21"></span>
+            <span style="--i:15"></span>
+            <span style="--i:13"></span>
+            <span style="--i:2"></span>
+            <span style="--i:12"></span>
+            <span style="--i:14"></span>
+            <span style="--i:29"></span>
+        </div>
+
+        <image class="first-img" src="../img/IconGames/paperComputer.png"></image>
+        <image class="second-img" src="../img/IconGames/stonePlayer.png"></image>
+        <div class="icon-container">
+            <i class="fa-solid fa-gear"></i>
+        </div>
+        <div class="demo">
+            <div class="icon-span">
+                <div class="close-container">
+                    <i class="fa-solid fa-xmark close"></i>
+                </div>
+                <div class="close-content--container">
+                    <div class="change-group">
+                        <p>Music Mode:</p>
+                        <label>
+                            On
+                        </label>
+                        <input onclick="Demo()" type="radio" name="music" value="On">
+                        <label>
+                            Off
+                        </label>
+                        <input onclick="Demo()" type="radio" name="music" value="Off">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-container">
+            <div class="content-container">
+                <h1>Rock</h1>
+                <h1>Paper</h1>
+                <h1>Scisscors</h1>
+            </div>
+
+            <div class="button-container">
+                <div class="outer-play-btn">
+                    <button class="play-btn" onclick="change()">Play</button>
+                </div>
+                <div class="outer-play-btn">
+                    <button class="play-btn">Rules</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../js/index.js"></script>
+
+</html>

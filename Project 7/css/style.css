@@ -1,0 +1,286 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*General Style*/
+.main-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  letter-spacing: 7px;
+}
+body {
+  background-color: #252839;
+  min-height: 100vh;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.bubbles {
+  position: absolute;
+  display: flex;
+}
+
+.bubbles span {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background: #4fc3dc;
+  margin: 0 4px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 0px 10px #4fc3dc44, 0 0 50px #4fc3dc, 0 0 100px #4fc3dc;
+  animation: animate 15s linear infinite;
+  animation-duration: calc(125s / var(--i));
+}
+
+.bubbles span:nth-child(even) {
+  background: #ff2d75;
+  box-shadow: 0px 0px 0px 10px #ff2d7544, 0 0 50px #ff2d75, 0 0 100px #ff2d75;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(100vh) scale(0);
+  }
+  100% {
+    transform: translateY(-10vh) scale(1);
+  }
+}
+
+/*Content Style*/
+.content-container {
+  width: 100%;
+  height: 75vh;
+  gap: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.content-container h1 {
+  color: transparent;
+  background: linear-gradient(
+    to right,
+    #fd004c 16.7%,
+    #fe9000 16.7%,
+    #fe9000 33.4%,
+    #fff020 33.4%,
+    #fff020 50.1%,
+    #3edf4b 50.1%,
+    #3edf4b 66.8%,
+    #3363ff 66.8%,
+    #3363ff 83.5%,
+    #b102b7 83.5%
+  );
+  -webkit-background-clip: text;
+  text-transform: uppercase;
+  animation: rainbow 10s linear infinite;
+  letter-spacing: 0.05em;
+  font-size: 100px;
+}
+/*Content Animation*/
+@keyframes rainbow {
+  0% {
+    background-position: -10em 0;
+  }
+  50% {
+    background-position: 10em 0;
+  }
+  100% {
+    background-position: -10em 0;
+  }
+}
+
+/*General Button Style*/
+.button-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+/*Button Style*/
+.play-btn {
+  font-size: 30px;
+  width: 140px;
+  height: 50px;
+  color: whitesmoke;
+  border: none;
+  border-radius: 50px;
+  background-color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.25s linear;
+  cursor: pointer;
+}
+
+/*Button Transition*/
+.play-btn:hover {
+  width: 150px;
+  height: 60px;
+}
+
+.outer-play-btn:hover {
+  height: 70px;
+  width: 160px;
+}
+
+/*Outer Button Style*/
+.outer-play-btn {
+  height: 60px;
+  width: 150px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  border-radius: 50px;
+  position: relative;
+  background-image: linear-gradient(#14ff39, #ffeb3b, #ff00e0);
+  box-shadow: 0px 0px 35px green;
+  animation: rotate 1.25s linear infinite;
+  transition: all 0.25s linear;
+}
+
+/*Button Animation*/
+@keyframes rotate {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    filter: hue-rotate(180deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+/*Image Style*/
+.first-img {
+  width: 160px;
+  height: 150px;
+  scale: 1.5;
+  rotate: 320deg;
+  position: absolute;
+  bottom: 100px;
+  left: 100px;
+  animation: move 3s linear infinite;
+}
+
+.second-img {
+  width: 160px;
+  height: 150px;
+  scale: 1.5;
+  rotate: 320deg;
+  position: absolute;
+  right: 100px;
+  top: 100px;
+  animation: move 3s linear infinite;
+}
+
+/*Button Animation*/
+@keyframes move {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}
+
+/*Setting Style*/
+.icon-container {
+  font-size: 2rem;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 999;
+  color: white;
+}
+
+i {
+  cursor: pointer;
+}
+
+.icon-span {
+  display: none;
+  position: absolute;
+  width: 50%;
+  height: 100vh;
+  background: #535c68;
+  top: 50%;
+  left: 50%;
+  z-index: 999;
+  transform: translate(-50%, -50%);
+}
+
+.close {
+  position: absolute;
+  right: 0;
+  font-size: 2rem;
+}
+
+.close-container {
+  display: block;
+  width: 100%;
+  height: 2rem;
+  position: relative;
+}
+
+.demo {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 99;
+}
+
+.one {
+  text-align: center;
+  font-size: 5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #dff9fb;
+}
+
+.fa-gear:hover {
+  animation: spin 0.25s linear forwards;
+}
+
+.fa-gear:not(:hover) {
+  animation: spin2 0.25s linear forwards;
+}
+
+@keyframes spin {
+  to {
+    rotate: 360deg;
+    color: black;
+  }
+}
+
+@keyframes spin2 {
+  from {
+    rotate: 0deg;
+    color: black;
+  }
+  to {
+    rotate: -360deg;
+    color: white;
+  }
+}
+
+.change-group {
+  font-size: 2rem;
+}
+
+input[type="radio"] {
+  width: 20px;
+  height: 20px;
+}
