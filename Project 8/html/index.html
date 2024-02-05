@@ -11,63 +11,71 @@
 
 <body>
     <main>
+        <div class="pyro">
+            <div class="before"></div>
+            <div class="after"></div>
+        </div>
         <div class="main-container">
-            <div id="left">
-                <div class="frame-container">
-                    <div class="card-border display" id="border"></div>
-                    <img src="../img/frame.png" id="frameOut" class="card already" onclick="selectFrame(1)">
-                </div>
-                <div class="frame-container">
-                    <div class="card-border display" id="border"></div>
-                    <img src="../img/frame2.png" id="frameOut" class="card already" onclick="selectFrame(2)">
-                </div>
-                <div class="frame-container">
-                    <div class="card-border display" id="border"></div>
-                    <img src="../img/frame3.png" id="frameOut" class="card already" onclick="selectFrame(3)">
-                </div>
-                <div class="frame-container">
-                    <div class="card-border display" id="border"></div>
-                    <img src="../img/frame4.png" id="frameOut" class="card already" onclick="selectFrame(4)">
-                </div>
-                <div class="frame-container">
-                    <div class="card-border display" id="border"></div>
-                    <img src="../img/frame5.png" id="frameOut" class="card already" onclick="selectFrame(5)">
-                </div>
-                <div class="frame-container">
-                    <div class="card-border display" id="border"></div>
-                    <img src="../img/frame6.png" id="frameOut" class="card already" onclick="selectFrame(6)">
-                </div>
-                <div class="frame-container">
-                    <div class="card-border display" id="border"></div>
-                    <img src="../img/frame7.png" id="frameOut" class="card already" onclick="selectFrame(7)">
-                </div>
-                <div class="frame-container">
-                    <div class="card-border display" id="border"></div>
-                    <img src="../img/frame8.png" id="frameOut" class="card already" onclick="selectFrame(8)">
-                </div>
-                <div class="frame-container">
-                    <div class="card-border display" id="border"></div>
-                    <img src="../img/frame9.png" id="frameOut" class="card already" onclick="selectFrame(9)">
-                </div>
-                <div class="frame-container">
-                    <div class="card-border display" id="border"></div>
-                    <img src="../img/frame10.png" id="frameOut" class="card already" onclick="selectFrame(10)">
-                </div>
-                <input type="file" accept="image/*" style="display:none;" id="frameInput">
-                <button id="addFrame" class="plus">+</button>
-            </div>
             <div id="right">
                 <div id="pic">
-                    <img src="" id="imgOut" width="300px" height="300px" style="display:none;">
+                    <img src="" id="imgOut" width="550px" height="400px" style="display:none;">
                     <canvas id="canvas"></canvas>
+                    <img src="" id="imgOut2" style="display:none;">
+                    <canvas id="canvas-download"></canvas>
                 </div>
                 <input type="file" id="fileInput" accept="image/*" style="display:none;">
                 <div class="btn-container">
                     <button onclick="chooseFile()" class="button">Tải ảnh lên</button>
-                    <button id="reload" class="button special">Làm mới</button>
+                    <button id="reload" class="button">Làm mới</button>
                     <a href="" id="download">
                         <button class="button">Tải ảnh về</button>
                     </a>
+                </div>
+            </div>
+            <div id="down">
+                <div id="left">
+                    <div class="frame-container">
+                        <div class="card-border display" id="border"></div>
+                        <img src="../img/frame1.png" id="frameOut" class="card already" onclick="selectFrame(1)">
+                    </div>
+                    <div class="frame-container">
+                        <div class="card-border display" id="border"></div>
+                        <img src="../img/frame2.png" id="frameOut" class="card already" onclick="selectFrame(2)">
+                    </div>
+                    <div class="frame-container">
+                        <div class="card-border display" id="border"></div>
+                        <img src="../img/frame3.png" id="frameOut" class="card already" onclick="selectFrame(3)">
+                    </div>
+                    <div class="frame-container">
+                        <div class="card-border display" id="border"></div>
+                        <img src="../img/frame4.png" id="frameOut" class="card already" onclick="selectFrame(4)">
+                    </div>
+                    <div class="frame-container">
+                        <div class="card-border display" id="border"></div>
+                        <img src="../img/frame5.png" id="frameOut" class="card already" onclick="selectFrame(5)">
+                    </div>
+                    <div class="frame-container">
+                        <div class="card-border display" id="border"></div>
+                        <img src="../img/frame6.png" id="frameOut" class="card already" onclick="selectFrame(6)">
+                    </div>
+                    <div class="frame-container">
+                        <div class="card-border display" id="border"></div>
+                        <img src="../img/frame7.png" id="frameOut" class="card already" onclick="selectFrame(7)">
+                    </div>
+                    <div class="frame-container">
+                        <div class="card-border display" id="border"></div>
+                        <img src="../img/frame8.png" id="frameOut" class="card already" onclick="selectFrame(8)">
+                    </div>
+                    <div class="frame-container">
+                        <div class="card-border display" id="border"></div>
+                        <img src="../img/frame9.png" id="frameOut" class="card already" onclick="selectFrame(9)">
+                    </div>
+                    <div class="frame-container">
+                        <div class="card-border display" id="border"></div>
+                        <img src="../img/frame10.png" id="frameOut" class="card already" onclick="selectFrame(10)">
+                    </div>
+                    <input type="file" accept="image/*" style="display:none;" id="frameInput">
+                    <button id="addFrame" class="plus">+</button>
                 </div>
             </div>
         </div>
