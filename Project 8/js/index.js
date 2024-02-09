@@ -1,10 +1,16 @@
 let input = document.getElementById("fileInput");
 var imgOutput = document.getElementById("imgOut");
-var imgOutput2 = document.getElementById("imgOut2");
 var canvas = document.getElementById("canvas");
 var context = canvas.getContext("2d");
-var canvas1 = document.getElementById("canvas-download");
-var context1 = canvas1.getContext("2d");
+var canvas2 = document.getElementById("canvas2");
+var context2 = canvas2.getContext("2d");
+var originalWidth = 0;
+var originalHeight = 0;
+var scale = 1;
+var translateX = 0;
+var translateY = 0;
+var isDragging = false;
+var startX, startY;
 var downloadBtn = document.getElementById("download");
 var load = false;
 var reloadBtn = document.getElementById("reload");
@@ -14,19 +20,20 @@ var leftE = document.getElementById("left");
 var frameAlready = document.querySelectorAll(".already");
 var count = 1;
 var count1 = frameAlready.length + 1;
+var draw = false;
+var times = 0;
 function selectFrame(selectedIndex) {
+  times = selectedIndex;
   if (load === false) {
     alert("Please upload your avatar before choose frame to add");
   } else {
     var frameEs = document.querySelectorAll("#frameOut");
     frameEs.forEach(function (frame, index) {
       if (index + 1 == selectedIndex) {
-        context.globalAlpha = 1;
-        context.drawImage(imgOutput, 0, 0, canvas.width, canvas.height);
-        context.globalAlpha = 1;
+        demo();
         context.drawImage(frame, 0, 0, canvas.width, canvas.height);
-        context1.globalAlpha = 1;
-        context1.drawImage(frame, 0, 0, canvas1.width, canvas1.height);
+        context2.clearRect(0, 0, canvas2.width, canvas2.height);
+        context2.drawImage(frame, 0, 0, canvas2.width, canvas2.height);
       } else {
       }
     });
@@ -38,7 +45,19 @@ function selectFrame(selectedIndex) {
         frameBorder.classList.add("display");
       }
     });
+    draw = true;
   }
+}
+
+function demo() {
+  context.clearRect(0, 0, canvas.width, canvas.height);
+  context.drawImage(
+    imgOutput,
+    translateX,
+    translateY,
+    originalWidth * scale,
+    originalHeight * scale
+  );
 }
 
 frameBtn.onclick = function () {
@@ -71,15 +90,27 @@ frameBtn.onclick = function () {
   count1++;
   count++;
 };
-
+canvas.width = 600;
+canvas.height = 600;
+canvas2.width = 600;
+canvas2.height = 600;
 reloadBtn.onclick = function () {
   if (load === false) {
     alert("Can not find avatar with frame to reload");
   } else {
-    canvas.width = imgOutput.width - 4;
-    canvas.height = imgOutput.height - 4;
-    context.globalAlpha = 1;
-    context.drawImage(imgOutput, 0, 0, canvas.width, canvas.height);
+    scale = Math.max(
+      canvas.width / originalWidth,
+      canvas.height / originalHeight
+    );
+    translateX = (canvas.width - originalWidth * scale) / 2;
+    translateY = (canvas.height - originalHeight * scale) / 2;
+    context.drawImage(
+      imgOutput,
+      translateX,
+      translateY,
+      originalWidth * scale,
+      originalHeight * scale
+    );
   }
 };
 
@@ -89,8 +120,7 @@ function chooseFile() {
 
 imgOutput.onload = function () {
   load = true;
-  canvas.width = imgOutput.width - 4;
-  canvas.height = imgOutput.height - 4;
+  draw = false;
   context.globalAlpha = 1;
   context.drawImage(imgOutput, 0, 0, canvas.width, canvas.height);
 };
@@ -100,7 +130,7 @@ downloadBtn.onclick = function () {
     alert("Can not find avatar or avatar with frame to download");
   } else {
     var link = document.createElement("a");
-    var previewCanvas = canvas1.toDataURL();
+    var previewCanvas = canvas.toDataURL();
     link.href = previewCanvas;
     link.download = "pic_frame.png";
     link.style.display = "none";
@@ -109,45 +139,79 @@ downloadBtn.onclick = function () {
 };
 
 input.onchange = function (e) {
-  var file = e.target.files[0];
   var previewImg = URL.createObjectURL(e.target.files[0]);
   imgOutput.src = previewImg;
-  imgOutput2.src = previewImg;
-  var reader = new FileReader();
-  reader.onload = function (e) {
-    var img = new Image();
-    img.onload = function () {
-      var imgWidth = img.naturalWidth;
-      var imgHeight = img.naturalHeight;
-      var sourceX = imgWidth / 4;
-      var sourceY = 0;
-      var imglength = sourceX + sourceX;
-      var result = 0;
-      if (imgWidth > imgHeight) {
-        result = imgHeight;
-      } else {
-        result = imgWidth;
-      }
-      canvas1.width = result;
-      canvas1.height = result;
-      if (imgWidth == imgHeight) {
-        context1.globalAlpha = 1;
-        context1.drawImage(imgOutput, 0, 0, canvas1.width, canvas1.height);
-      } else {
-        context1.drawImage(
-          imgOutput2,
-          sourceX,
-          sourceY,
-          imglength,
-          imgHeight,
-          0,
-          0,
-          imgWidth,
-          imgHeight
-        );
-      }
-    };
-    img.src = e.target.result;
+  var img = new Image();
+  img.src = previewImg;
+  img.onload = function () {
+    originalHeight = img.naturalHeight;
+    originalWidth = img.naturalWidth;
+    scale = Math.max(
+      canvas.width / originalWidth,
+      canvas.height / originalHeight
+    );
+    translateX = (canvas.width - originalWidth * scale) / 2;
+    translateY = (canvas.height - originalHeight * scale) / 2;
+    redrawImage();
   };
-  reader.readAsDataURL(file);
+};
+
+function redrawImage() {
+  context.clearRect(0, 0, canvas.width, canvas.height);
+  context.drawImage(
+    imgOutput,
+    translateX,
+    translateY,
+    originalWidth * scale,
+    originalHeight * scale
+  );
+  draw = false;
+  if (draw == false) {
+    selectFrame(times);
+  } else {
+  }
+}
+
+function updateZoom(newScale) {
+  var mouseX = (canvas.width / 2 - translateX) / scale;
+  var mouseY = (canvas.height / 2 - translateY) / scale;
+
+  scale = newScale;
+  translateX = canvas.width / 2 - mouseX * scale;
+  translateY = canvas.height / 2 - mouseY * scale;
+
+  redrawImage();
+}
+
+canvas2.addEventListener("mousedown", function (e) {
+  isDragging = true;
+  startX = e.clientX;
+  startY = e.clientY;
+});
+
+canvas2.addEventListener("mousemove", function (e) {
+  if (isDragging) {
+    var deltaX = e.clientX - startX;
+    var deltaY = e.clientY - startY;
+    translateX += deltaX;
+    translateY += deltaY;
+    redrawImage();
+    startX = e.clientX;
+    startY = e.clientY;
+  }
+});
+
+canvas2.addEventListener("mouseup", function () {
+  isDragging = false;
+});
+
+canvas2.addEventListener("wheel", function (e) {
+  var scaleFactor = e.deltaY > 0 ? 0.9 : 1.1;
+  updateZoom(scale * scaleFactor);
+});
+
+window.onload = function () {
+  alert(
+    "Do phiên bản hiện tại các tính năng zoom và kéo thả ảnh chỉ đáp ứng cho máy tính và các thiết bị có sử dụng chuột mong bạn thông cảm và chuyển sang thiết bị khác hoặc chờ phiên bản kế tiếp nhé!"
+  );
 };
