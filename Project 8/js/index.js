@@ -6,6 +6,7 @@ var canvas2 = document.getElementById("canvas2");
 var context2 = canvas2.getContext("2d");
 var originalWidth = 0;
 var originalHeight = 0;
+var nothin = true;
 var scale = 1;
 var translateX = 0;
 var translateY = 0;
