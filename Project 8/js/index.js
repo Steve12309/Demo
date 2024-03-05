@@ -22,6 +22,30 @@ var count = 1;
 var count1 = frameAlready.length + 1;
 var draw = false;
 var times = 0;
+var report = document.querySelector(".fa-flag");
+var reportPage = document.querySelector(".report-page");
+var info = document.querySelector(".fa-circle-info");
+var infoPage = document.querySelector(".info-page");
+var closeBtn = document.querySelector(".fa-xmark");
+var closeBtn2 = document.querySelector(".fa-xmark2");
+var mouse = document.querySelector(".right");
+
+report.onclick = function () {
+  reportPage.classList.remove("display");
+};
+
+info.onclick = function () {
+  infoPage.classList.remove("display");
+};
+
+closeBtn.onclick = function () {
+  infoPage.classList.add("display");
+};
+
+closeBtn2.onclick = function () {
+  reportPage.classList.add("display");
+};
+
 function selectFrame(selectedIndex) {
   times = selectedIndex;
   if (load === false) {
@@ -30,8 +54,14 @@ function selectFrame(selectedIndex) {
     var frameEs = document.querySelectorAll("#frameOut");
     frameEs.forEach(function (frame, index) {
       if (index + 1 == selectedIndex) {
-        demo();
-        context.drawImage(frame, 0, 0, canvas.width, canvas.height);
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        context.drawImage(
+          imgOutput,
+          translateX,
+          translateY,
+          originalWidth * scale,
+          originalHeight * scale
+        );
         context2.clearRect(0, 0, canvas2.width, canvas2.height);
         context2.drawImage(frame, 0, 0, canvas2.width, canvas2.height);
       } else {
@@ -47,17 +77,6 @@ function selectFrame(selectedIndex) {
     });
     draw = true;
   }
-}
-
-function demo() {
-  context.clearRect(0, 0, canvas.width, canvas.height);
-  context.drawImage(
-    imgOutput,
-    translateX,
-    translateY,
-    originalWidth * scale,
-    originalHeight * scale
-  );
 }
 
 frameBtn.onclick = function () {
@@ -116,13 +135,11 @@ reloadBtn.onclick = function () {
 
 function chooseFile() {
   document.getElementById("fileInput").click();
+  load = true;
 }
 
 imgOutput.onload = function () {
-  load = true;
   draw = false;
-  context.globalAlpha = 1;
-  context.drawImage(imgOutput, 0, 0, canvas.width, canvas.height);
 };
 
 downloadBtn.onclick = function () {
@@ -166,9 +183,12 @@ function redrawImage() {
     originalHeight * scale
   );
   draw = false;
-  if (draw == false) {
-    selectFrame(times);
+  if (load === false) {
   } else {
+    if (draw == false) {
+      selectFrame(times);
+    } else {
+    }
   }
 }
 
@@ -206,6 +226,7 @@ canvas2.addEventListener("mouseup", function () {
 });
 
 canvas2.addEventListener("wheel", function (e) {
+  e.preventDefault();
   var scaleFactor = e.deltaY > 0 ? 0.9 : 1.1;
   updateZoom(scale * scaleFactor);
 });

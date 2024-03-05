@@ -6,6 +6,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 #right {
@@ -126,7 +127,7 @@ body {
 }
 
 body {
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .btn-container {
@@ -615,4 +616,197 @@ canvas {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.fa-circle-info {
+  font-size: 1.5rem;
+  margin: 8px;
+  z-index: 999;
+}
+
+.fa-circle-info:hover {
+  color: whitesmoke;
+  cursor: pointer;
+  transform: scale linear 0.25s;
+  scale: 1.2;
+}
+
+.fa-flag {
+  font-size: 1.5rem;
+  margin: 8px;
+  z-index: 999;
+}
+
+.fa-flag:hover {
+  color: whitesmoke;
+  cursor: pointer;
+  transform: scale linear 0.25s;
+  scale: 1.2;
+}
+
+.icon {
+  display: flex;
+  justify-content: space-between;
+  background-color: grey;
+  border-radius: 20px;
+  padding: 5px;
+}
+
+.info-page {
+  z-index: 999;
+  width: 900px;
+  height: 650px;
+  background-color: gray;
+  position: absolute;
+  opacity: 1;
+  top: 49%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+}
+
+.report-page {
+  z-index: 999;
+  width: 900px;
+  height: 650px;
+  background-color: gray;
+  position: absolute;
+  opacity: 1;
+  top: 49%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+}
+
+.fa-xmark {
+  margin: 20px;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.fa-xmark2 {
+  margin: 20px;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.display {
+  display: none;
+}
+
+.icon-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.icon-report--container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.fa-xmark:hover {
+  transform: scale(1.5);
+  transition: all linear 0.1s;
+  color: red;
+}
+
+.fa-xmark2:hover {
+  transform: scale(1.5);
+  transition: all linear 0.1s;
+  color: red;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 900;
+  line-height: 45px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 5px;
+}
+
+.version {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+a {
+  color: darkblue;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  color: lightblue;
+}
+
+a:active {
+  color: green;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#form label {
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  user-select: none;
+}
+
+#form input {
+  width: 200px;
+  height: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  padding: 5px;
+  border: none;
+  outline: none;
+  background-color: #3037b3;
+  color: whitesmoke;
+}
+
+#form input:focus {
+  border: 1px solid #00ddff;
+}
+
+#form textarea {
+  width: 800px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background-color: #3037b3;
+  color: whitesmoke;
+  padding: 5px;
 }
