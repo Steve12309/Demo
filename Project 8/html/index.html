@@ -13,120 +13,136 @@
 </head>
 
 <body>
-    <div class="info-page display">
-        <div class="icon-container">
-            <i class="fa-solid fa-xmark"></i>
+    <div class="full-container">
+        <div class="icon">
+            <i class="fa-solid fa-circle-info"></i>
+            <h1>Frame</h1>
+            <i class="fa-solid fa-flag"></i>
         </div>
-        <div class="info-container">
-            <h1>Info about App</h1>
-            <div class="time">
-                <h2>Time</h2>
-                <p>Date create: 01/01/2024</p>
-                <p>Date complete: 15/01/2024</p>
+        <div class="up">
+            <div class="info-page display">
+                <div class="icon-container">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <div class="info-container">
+                    <h1>Info about App</h1>
+                    <div class="time">
+                        <h2>A)Time</h2>
+                        <p>Date create: 01/01/2024</p>
+                        <p>Date complete: 15/01/2024</p>
+                    </div>
+                    <div class="author">
+                        <h2>B)Author</h2>
+                        <p>Kiến Trung(Design)</p>
+                        <p>Contact: <a href="https://www.facebook.com/phan.k.trung.315" target="_blank">here</a></p>
+                        <p>Nhật Anh(Function)</p>
+                        <p>Contact: <a href="https://www.facebook.com/profile.php?id=100076253694880"
+                                target="_blank">here</a></p>
+                    </div>
+                    <div class="description">
+                        <p>This app is using for add frame to your avatar and then download it to upload on facebook or
+                            somewhere else
+                            as you want
+                        </p>
+                    </div>
+                </div>
+                <span class="version">V2.0.0</span>
             </div>
-            <div class="author">
-                <h2>Author</h2>
-                <p>Kiến Trung(Design)</p>
-                <p>Contact: <a href="www.facebook.com" target="_blank">here</a></p>
-                <p>Nhật Anh(Function)</p>
-                <p>Contact: <a href="www.facebook.com" target="_blank">here</a></p>
-            </div>
-            <div class="description">
-                <p>This app is using for add frame to your avatar and then download it to upload on facebook or
-                    somewhere else
-                    as you want
-                </p>
-            </div>
-        </div>
-        <span class="version">V2.0.0</span>
-    </div>
 
-    <div class="report-page display">
-        <div class="icon-report--container">
-            <i class="fa-solid fa-xmark fa-xmark2"></i>
-        </div>
-        <div class="report-container">
-            <form action="get" id="form">
-                <label for="info">Your Name<input type="text" name="info"></label>
-                <label for="info">Your Age<input type="number" name="info" min="10" max="90"></label>
-                <label for="info">Your Problem<textarea name="info" id="problems" cols="30" rows="15"
-                        maxlength="1000"></textarea></label>
-            </form>
-        </div>
-        <div class="report-container"></div>
-    </div>
-    <div class="icon">
-        <i class="fa-solid fa-circle-info"></i>
-        <h1>Frame</h1>
-        <i class="fa-solid fa-flag"></i>
-    </div>
-    <main>
-        <div class="pyro">
-            <div class="before"></div>
-            <div class="after"></div>
-        </div>
-        <div class="main-container">
-            <div id="right">
-                <div id="pic">
-                    <img src="" id="imgOut" width="500px" height="500px" style="display: none" />
-                    <canvas id="canvas"></canvas>
-                    <canvas id="canvas2"></canvas>
+            <div class="report-page display">
+                <div class="icon-report--container">
+                    <i class="fa-solid fa-xmark fa-xmark2"></i>
                 </div>
-                <input type="file" id="fileInput" accept="image/*" style="display: none" />
-                <div class="btn-container">
-                    <button onclick="chooseFile()" class="button">Tải ảnh lên</button>
-                    <button id="reload" class="button">Làm mới</button>
-                    <button class="button" id="download">Tải ảnh về</button>
+                <div class="report-container">
+                    <form action="get" id="form">
+                        <label for="info">Your Name<input type="text" name="info"></label>
+                        <label for="info">Your Age<input type="number" name="info" min="10" max="90"></label>
+                        <label for="info">Your Problem<textarea name="info" id="problems" cols="30" rows="15"
+                                maxlength="1000"></textarea></label>
+                    </form>
                 </div>
+                <div class="report-container"></div>
             </div>
-            <div id="down">
-                <div id="left">
-                    <div class="frame-container">
-                        <div class="card-border display" id="border"></div>
-                        <img src="../img/frame1.png" id="frameOut" class="card already" onclick="selectFrame(1)" />
-                    </div>
-                    <div class="frame-container">
-                        <div class="card-border display" id="border"></div>
-                        <img src="../img/frame2.png" id="frameOut" class="card already" onclick="selectFrame(2)" />
-                    </div>
-                    <div class="frame-container">
-                        <div class="card-border display" id="border"></div>
-                        <img src="../img/frame3.png" id="frameOut" class="card already" onclick="selectFrame(3)" />
-                    </div>
-                    <div class="frame-container">
-                        <div class="card-border display" id="border"></div>
-                        <img src="../img/frame4.png" id="frameOut" class="card already" onclick="selectFrame(4)" />
-                    </div>
-                    <div class="frame-container">
-                        <div class="card-border display" id="border"></div>
-                        <img src="../img/frame5.png" id="frameOut" class="card already" onclick="selectFrame(5)" />
-                    </div>
-                    <div class="frame-container">
-                        <div class="card-border display" id="border"></div>
-                        <img src="../img/frame6.png" id="frameOut" class="card already" onclick="selectFrame(6)" />
-                    </div>
-                    <div class="frame-container">
-                        <div class="card-border display" id="border"></div>
-                        <img src="../img/frame7.png" id="frameOut" class="card already" onclick="selectFrame(7)" />
-                    </div>
-                    <div class="frame-container">
-                        <div class="card-border display" id="border"></div>
-                        <img src="../img/frame8.png" id="frameOut" class="card already" onclick="selectFrame(8)" />
-                    </div>
-                    <div class="frame-container">
-                        <div class="card-border display" id="border"></div>
-                        <img src="../img/frame9.png" id="frameOut" class="card already" onclick="selectFrame(9)" />
-                    </div>
-                    <div class="frame-container">
-                        <div class="card-border display" id="border"></div>
-                        <img src="../img/frame10.png" id="frameOut" class="card already" onclick="selectFrame(10)" />
-                    </div>
-                    <input type="file" accept="image/*" style="display: none" id="frameInput" />
-                    <button id="addFrame" class="plus"><span>+</span></button>
+            <main>
+                <div class="pyro">
+                    <div class="before"></div>
+                    <div class="after"></div>
                 </div>
-            </div>
+                <div class="main-container">
+                    <div id="right">
+                        <div id="pic">
+                            <img src="" id="imgOut" width="500px" height="500px" style="display: none" />
+                            <canvas id="canvas"></canvas>
+                            <canvas id="canvas2"></canvas>
+                        </div>
+                        <input type="file" id="fileInput" accept="image/*" style="display: none" />
+                        <div class="btn-container">
+                            <button onclick="chooseFile()" class="button">Tải ảnh lên</button>
+                            <button id="reload" class="button">Làm mới</button>
+                            <button class="button" id="download">Tải ảnh về</button>
+                        </div>
+                    </div>
+                    <div id="down">
+                        <div id="left">
+                            <div class="frame-container">
+                                <div class="card-border display" id="border"></div>
+                                <img src="../img/frame1.png" id="frameOut" class="card already"
+                                    onclick="selectFrame(1)" />
+                            </div>
+                            <div class="frame-container">
+                                <div class="card-border display" id="border"></div>
+                                <img src="../img/frame2.png" id="frameOut" class="card already"
+                                    onclick="selectFrame(2)" />
+                            </div>
+                            <div class="frame-container">
+                                <div class="card-border display" id="border"></div>
+                                <img src="../img/frame3.png" id="frameOut" class="card already"
+                                    onclick="selectFrame(3)" />
+                            </div>
+                            <div class="frame-container">
+                                <div class="card-border display" id="border"></div>
+                                <img src="../img/frame4.png" id="frameOut" class="card already"
+                                    onclick="selectFrame(4)" />
+                            </div>
+                            <div class="frame-container">
+                                <div class="card-border display" id="border"></div>
+                                <img src="../img/frame5.png" id="frameOut" class="card already"
+                                    onclick="selectFrame(5)" />
+                            </div>
+                            <div class="frame-container">
+                                <div class="card-border display" id="border"></div>
+                                <img src="../img/frame6.png" id="frameOut" class="card already"
+                                    onclick="selectFrame(6)" />
+                            </div>
+                            <div class="frame-container">
+                                <div class="card-border display" id="border"></div>
+                                <img src="../img/frame7.png" id="frameOut" class="card already"
+                                    onclick="selectFrame(7)" />
+                            </div>
+                            <div class="frame-container">
+                                <div class="card-border display" id="border"></div>
+                                <img src="../img/frame8.png" id="frameOut" class="card already"
+                                    onclick="selectFrame(8)" />
+                            </div>
+                            <div class="frame-container">
+                                <div class="card-border display" id="border"></div>
+                                <img src="../img/frame9.png" id="frameOut" class="card already"
+                                    onclick="selectFrame(9)" />
+                            </div>
+                            <div class="frame-container">
+                                <div class="card-border display" id="border"></div>
+                                <img src="../img/frame10.png" id="frameOut" class="card already"
+                                    onclick="selectFrame(10)" />
+                            </div>
+                            <input type="file" accept="image/*" style="display: none" id="frameInput" />
+                            <button id="addFrame" class="plus"><span>+</span></button>
+                        </div>
+                    </div>
+                </div>
+            </main>
         </div>
-    </main>
+        <div class="down"></div>
+    </div>
 </body>
 <script src="../js/index.js"></script>
 

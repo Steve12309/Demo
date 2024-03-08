@@ -1,4 +1,4 @@
-body {
+.up {
   background-image: url("../img/background.jpg");
   background-size: cover;
 }
@@ -650,12 +650,15 @@ canvas {
   background-color: grey;
   border-radius: 20px;
   padding: 5px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 
 .info-page {
   z-index: 999;
   width: 900px;
-  height: 650px;
+  height: 600px;
   background-color: gray;
   position: absolute;
   opacity: 1;
@@ -668,7 +671,7 @@ canvas {
 .report-page {
   z-index: 999;
   width: 900px;
-  height: 650px;
+  height: 600px;
   background-color: gray;
   position: absolute;
   opacity: 1;
@@ -791,7 +794,7 @@ a:active {
   padding: 5px;
   border: none;
   outline: none;
-  background-color: #3037b3;
+  background-color: #222555;
   color: whitesmoke;
 }
 
@@ -806,7 +809,44 @@ a:active {
   border-radius: 10px;
   border: none;
   outline: none;
-  background-color: #3037b3;
+  background-color: #222555;
   color: whitesmoke;
   padding: 5px;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+}
+body::-webkit-scrollbar-track {
+  background-color: #fafafa;
+  border-radius: 50%;
+}
+body::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(-45deg, #6a5af9, #d66efd);
+  border-radius: 50px;
+}
+
+#left::-webkit-scrollbar {
+  width: 10px;
+}
+#left::-webkit-scrollbar-track {
+  background-color: #fafafa;
+  border-radius: 50%;
+}
+#left::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(-45deg, #6a5af9, #d66efd);
+  border-radius: 50px;
+}
+
+.full-container {
+  height: 150vh;
+  scroll-behavior: smooth;
+  background-image: url("../img/background.jpg");
+  background-size: auto;
+}
+
+.down {
+  background-color: #24297c;
+  width: 100vw;
+  height: 50vh;
 }
