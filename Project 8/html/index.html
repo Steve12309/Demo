@@ -27,23 +27,17 @@
                 <div class="info-container">
                     <h1>Info about App</h1>
                     <div class="time">
-                        <h2>A)Time</h2>
+                        <i class="fa-solid fa-clock"></i>
                         <p>Date create: 01/01/2024</p>
                         <p>Date complete: 15/01/2024</p>
                     </div>
                     <div class="author">
-                        <h2>B)Author</h2>
-                        <p>Kiến Trung(Design)</p>
+                        <i class="fa-solid fa-user"></i>
+                        <p>Kiến Trung (Design) </p>
                         <p>Contact: <a href="https://www.facebook.com/phan.k.trung.315" target="_blank">here</a></p>
-                        <p>Nhật Anh(Function)</p>
+                        <p>Nhật Anh (Function) </p>
                         <p>Contact: <a href="https://www.facebook.com/profile.php?id=100076253694880"
                                 target="_blank">here</a></p>
-                    </div>
-                    <div class="description">
-                        <p>This app is using for add frame to your avatar and then download it to upload on facebook or
-                            somewhere else
-                            as you want
-                        </p>
                     </div>
                 </div>
                 <span class="version">V2.0.0</span>
@@ -55,10 +49,20 @@
                 </div>
                 <div class="report-container">
                     <form action="get" id="form">
-                        <label for="info">Your Name<input type="text" name="info"></label>
-                        <label for="info">Your Age<input type="number" name="info" min="10" max="90"></label>
-                        <label for="info">Your Problem<textarea name="info" id="problems" cols="30" rows="15"
-                                maxlength="1000"></textarea></label>
+                        <h1>Report</h1>
+                        <label for="info">
+                            <div class="input">
+                                <input type="text" name="info" placeholder="Your Name"><i
+                                    class="fa-regular fa-user"></i>
+                            </div>
+                        </label>
+                        <label for="info"> <input type="number" name="info" min="10" max="90"
+                                placeholder="Your Age"></label>
+                        <label for="info"><textarea name="info" id="problems" cols="30" rows="15" maxlength="1000"
+                                placeholder="Your Problem"></textarea></label>
+                        <div class="foot-container">
+                            <button class="button submit">Submit</button>
+                        </div>
                     </form>
                 </div>
                 <div class="report-container"></div>

@@ -28,7 +28,6 @@ var info = document.querySelector(".fa-circle-info");
 var infoPage = document.querySelector(".info-page");
 var closeBtn = document.querySelector(".fa-xmark");
 var closeBtn2 = document.querySelector(".fa-xmark2");
-var mouse = document.querySelector(".right");
 
 report.onclick = function () {
   reportPage.classList.remove("display");
