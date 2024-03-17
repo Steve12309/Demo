@@ -29,6 +29,11 @@ var infoPage = document.querySelector(".info-page");
 var closeBtn = document.querySelector(".fa-xmark");
 var closeBtn2 = document.querySelector(".fa-xmark2");
 var clickTime = 0;
+var zoomIn = document.getElementById("zoom-in");
+var zoomOut = document.getElementById("zoom-out");
+var zoomLevel = document.querySelector(".zoom-level");
+var level = 50;
+var previousValue = 50;
 
 function check() {
   if (clickTime > 1) {
@@ -142,6 +147,7 @@ reloadBtn.onclick = function () {
       originalWidth * scale,
       originalHeight * scale
     );
+    zoomLevel.value = 50;
   }
 };
 
@@ -243,8 +249,31 @@ canvas2.addEventListener("wheel", function (e) {
   updateZoom(scale * scaleFactor);
 });
 
-window.onload = function () {
-  alert(
-    "Do phiên bản hiện tại các tính năng zoom và kéo thả ảnh chỉ đáp ứng cho máy tính và các thiết bị có sử dụng chuột mong bạn thông cảm và chuyển sang thiết bị khác hoặc chờ phiên bản kế tiếp nhé!"
-  );
+zoomLevel.oninput = function (e) {
+  var result = 1.0;
+  var currentValue = e.target.value;
+  if (currentValue > previousValue) {
+    result = 1.1;
+  } else if (currentValue < previousValue) {
+    result = 0.9;
+  } else {
+    result = 1.0;
+  }
+  updateZoom(scale * result);
+  previousValue = currentValue;
+  level = parseInt(zoomLevel.value);
+};
+
+zoomIn.onclick = function () {
+  var scalePoint = 1.1;
+  updateZoom(scale * scalePoint);
+  level += 1;
+  zoomLevel.value = level;
+};
+
+zoomOut.onclick = function () {
+  var scalePoint = 0.9;
+  updateZoom(scale * scalePoint);
+  level -= 1;
+  zoomLevel.value = level;
 };

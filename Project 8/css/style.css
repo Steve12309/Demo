@@ -1308,3 +1308,54 @@ textarea::placeholder {
   height: auto;
   margin-bottom: 20px;
 }
+
+.setting {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 20px 0px 20px 0px;
+}
+
+.zoom-in {
+  background-color: orangered;
+  padding: 10px;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.zoom-out {
+  background-color: orangered;
+  padding: 10px;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.zoom-level {
+  -webkit-appearance: none;
+  width: 400px;
+  height: 20px;
+  outline: none;
+  border-radius: 20px;
+  background-color: #d1d1d1;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 1);
+  overflow: hidden;
+}
+
+.zoom-level::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: black;
+  box-shadow: -410px 0 0 400px #00fd0a;
+  cursor: pointer;
+}
