@@ -575,6 +575,9 @@ canvas {
   .info-container {
     font-size: 1.2rem;
   }
+  .setting {
+    width: 500px;
+  }
 }
 
 @media only screen and (max-width: 2048px) {
@@ -610,6 +613,9 @@ canvas {
   }
   .info-container {
     font-size: 1.2rem;
+  }
+  .setting {
+    width: 500px;
   }
 }
 
@@ -647,6 +653,9 @@ canvas {
   .info-container {
     font-size: 1.2rem;
   }
+  .setting {
+    width: 500px;
+  }
 }
 
 @media only screen and (max-width: 1440px) {
@@ -681,6 +690,9 @@ canvas {
   }
   .info-container {
     font-size: 1.2rem;
+  }
+  .setting {
+    width: 500px;
   }
 }
 
@@ -718,6 +730,9 @@ canvas {
     font-size: 1.1rem;
     font-weight: 900;
   }
+  .setting {
+    width: 450px;
+  }
 }
 
 @media only screen and (max-width: 720px) {
@@ -753,6 +768,9 @@ canvas {
   .info-container {
     font-size: 1.1rem;
     font-weight: 900;
+  }
+  .setting {
+    width: 400px;
   }
 }
 
@@ -790,6 +808,9 @@ canvas {
     font-size: 1.1rem;
     font-weight: 900;
   }
+  .setting {
+    width: 350px;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -825,6 +846,9 @@ canvas {
   .info-container {
     font-size: 1.1rem;
     font-weight: 900;
+  }
+  .setting {
+    width: 300px;
   }
 }
 
@@ -862,6 +886,9 @@ canvas {
     font-size: 1.1rem;
     font-weight: 900;
   }
+  .setting {
+    width: 250px;
+  }
 }
 
 @media only screen and (max-width: 350px) {
@@ -897,6 +924,9 @@ canvas {
   .info-container {
     font-size: 1rem;
     font-weight: 900;
+  }
+  .setting {
+    width: 200px;
   }
 }
 
@@ -938,6 +968,9 @@ canvas {
   .info-container {
     font-size: 0.6rem;
     font-weight: 900;
+  }
+  .setting {
+    width: 180px;
   }
 }
 
