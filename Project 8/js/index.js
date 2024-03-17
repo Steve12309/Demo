@@ -229,10 +229,10 @@ canvas2.addEventListener("mousedown", function (e) {
   startY = e.clientY;
 });
 
-canvas2.addEventListener("ontouchstart", function (e) {
+canvas2.addEventListener("touchstart", function (e) {
   isDragging = true;
-  startX = e.clientX;
-  startY = e.clientY;
+  startX = e.touches[0].clientX;
+  startY = e.touches[0].clientY;
 });
 
 canvas2.addEventListener("mousemove", function (e) {
@@ -247,15 +247,16 @@ canvas2.addEventListener("mousemove", function (e) {
   }
 });
 
-canvas2.addEventListener("ontouchmove", function (e) {
+canvas2.addEventListener("touchmove", function (e) {
+  e.preventDefault();
   if (isDragging) {
-    var deltaX = e.clientX - startX;
-    var deltaY = e.clientY - startY;
+    var deltaX = e.touches[0].clientX - startX;
+    var deltaY = e.touches[0].clientY - startY;
     translateX += deltaX;
     translateY += deltaY;
     redrawImage();
-    startX = e.clientX;
-    startY = e.clientY;
+    startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
   }
 });
 
