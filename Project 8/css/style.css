@@ -1,7 +1,3 @@
-.up {
-  background-image: url("../img/background.jpg");
-  background-size: cover;
-}
 * {
   margin: 0;
   padding: 0;
@@ -22,6 +18,7 @@
   flex-direction: column;
   align-items: center;
   padding: 10px;
+  margin-bottom: 15px;
 }
 #left {
   width: 90vw;
@@ -62,6 +59,7 @@
 }
 
 .button {
+  user-select: none;
   font-weight: 700;
   font-size: 15px;
   width: 100%;
@@ -119,7 +117,7 @@
 
 .main-container {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   display: block;
   justify-content: space-between;
   padding: 10px;
@@ -199,9 +197,6 @@ canvas {
   bottom: 0;
 }
 
-#down {
-  padding-top: 20px;
-}
 .pyro > .before,
 .pyro > .after {
   position: fixed;
@@ -549,14 +544,16 @@ canvas {
   margin: auto;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 3840px) {
   #right {
     width: 70vw;
-    height: 72vh;
+    height: 90vh;
+    margin-bottom: 10px;
   }
   #left {
     width: 90vw;
-    height: 21vh;
+    height: 30vh;
+    margin: auto;
   }
 
   .btn-container button {
@@ -564,15 +561,31 @@ canvas {
     height: 50px;
     margin: auto;
   }
+  #form input {
+    width: 500px;
+    height: 20px;
+  }
+  #form textarea {
+    width: 500px;
+    height: 200px;
+  }
+  .submit {
+    width: 500px;
+  }
+  .info-container {
+    font-size: 1.2rem;
+  }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 2048px) {
   #right {
-    width: 90vw;
+    width: 70vw;
+    height: 90vh;
+    margin-bottom: 10px;
   }
   #left {
     width: 90vw;
-    height: 21vh;
+    height: 30vh;
     margin: auto;
   }
   .btn-container button {
@@ -581,18 +594,34 @@ canvas {
     margin: auto;
   }
   #pic {
-    width: 340px;
-    height: 340px;
+    width: 550px;
+    height: 550px;
+  }
+  #form input {
+    width: 500px;
+    height: 20px;
+  }
+  #form textarea {
+    width: 500px;
+    height: 200px;
+  }
+  .submit {
+    width: 500px;
+  }
+  .info-container {
+    font-size: 1.2rem;
   }
 }
 
-@media only screen and (max-width: 380px) {
+@media only screen and (max-width: 1152px) {
   #right {
-    width: 90vw;
+    width: 70vw;
+    height: 90vh;
+    margin-bottom: 10px;
   }
   #left {
     width: 90vw;
-    height: 21vh;
+    height: 30vh;
     margin: auto;
   }
   .btn-container button {
@@ -601,8 +630,314 @@ canvas {
     margin: auto;
   }
   #pic {
-    width: 230px;
-    height: 230px;
+    width: 450px;
+    height: 450px;
+  }
+  #form input {
+    width: 500px;
+    height: 20px;
+  }
+  #form textarea {
+    width: 500px;
+    height: 200px;
+  }
+  .submit {
+    width: 500px;
+  }
+  .info-container {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  #right {
+    width: 70vw;
+    height: 90vh;
+    margin-bottom: 10px;
+  }
+  #left {
+    width: 90vw;
+    height: 30vh;
+  }
+  .btn-container button {
+    width: 150px;
+    height: 75px;
+    margin: auto;
+  }
+  #pic {
+    width: 400px;
+    height: 400px;
+  }
+  #form input {
+    width: 500px;
+    height: 20px;
+  }
+  #form textarea {
+    width: 500px;
+    height: 200px;
+  }
+  .submit {
+    width: 500px;
+  }
+  .info-container {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  #right {
+    width: 70vw;
+    height: 80vh;
+    margin-bottom: 10px;
+  }
+  #left {
+    width: 90vw;
+    height: 30vh;
+  }
+  .btn-container button {
+    width: 150px;
+    height: 75px;
+    margin: auto;
+  }
+  #pic {
+    width: 400px;
+    height: 400px;
+  }
+  #form input {
+    width: 400px;
+    height: 20px;
+  }
+  #form textarea {
+    width: 400px;
+    height: 200px;
+  }
+  .submit {
+    width: 400px;
+  }
+  .info-container {
+    font-size: 1.1rem;
+    font-weight: 900;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  #right {
+    width: 70vw;
+    height: 70vh;
+    margin-bottom: 10px;
+  }
+  #left {
+    width: 90vw;
+    height: 30vh;
+  }
+  .btn-container button {
+    width: 145px;
+    height: 75px;
+    margin: auto;
+  }
+  #pic {
+    width: 350px;
+    height: 350px;
+  }
+  #form input {
+    width: 350px;
+    height: 20px;
+  }
+  #form textarea {
+    width: 350px;
+    height: 200px;
+  }
+  .submit {
+    width: 350px;
+  }
+  .info-container {
+    font-size: 1.1rem;
+    font-weight: 900;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  #right {
+    width: 70vw;
+    height: 70vh;
+    margin-bottom: 10px;
+  }
+  #left {
+    width: 90vw;
+    height: 30vh;
+  }
+  .btn-container button {
+    width: 120px;
+    height: 75px;
+    margin: auto;
+  }
+  #pic {
+    width: 320px;
+    height: 320px;
+  }
+  #form input {
+    width: 250px;
+    height: 20px;
+  }
+  #form textarea {
+    width: 250px;
+    height: 200px;
+  }
+  .submit {
+    width: 250px;
+  }
+  .info-container {
+    font-size: 1.1rem;
+    font-weight: 900;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #right {
+    width: 70vw;
+    height: 60vh;
+    margin-bottom: 10px;
+  }
+  #left {
+    width: 90vw;
+    height: 30vh;
+  }
+  .btn-container button {
+    width: 90px;
+    height: 70px;
+    margin: auto;
+  }
+  #pic {
+    width: 250px;
+    height: 250px;
+  }
+  #form input {
+    width: 190px;
+    height: 20px;
+  }
+  #form textarea {
+    width: 190px;
+    height: 200px;
+  }
+  .submit {
+    width: 190px;
+  }
+  .info-container {
+    font-size: 1.1rem;
+    font-weight: 900;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  #right {
+    width: 70vw;
+    height: 60vh;
+    margin-bottom: 10px;
+  }
+  #left {
+    width: 90vw;
+    height: 30vh;
+  }
+  .btn-container button {
+    width: 80px;
+    height: 65px;
+    margin: auto;
+  }
+  #pic {
+    width: 200px;
+    height: 200px;
+  }
+  #form input {
+    width: 150px;
+    height: 20px;
+  }
+  #form textarea {
+    width: 150px;
+    height: 200px;
+  }
+  .submit {
+    width: 150px;
+  }
+  .info-container {
+    font-size: 1.1rem;
+    font-weight: 900;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  #right {
+    width: 70vw;
+    height: 50vh;
+    margin-bottom: 10px;
+  }
+  #left {
+    width: 90vw;
+    height: 30vh;
+  }
+  .btn-container button {
+    width: 130px;
+    height: 65px;
+    margin: auto;
+  }
+  #pic {
+    width: 180px;
+    height: 180px;
+  }
+  #form input {
+    width: 120px;
+    height: 20px;
+  }
+  #form textarea {
+    width: 100px;
+    height: 200px;
+  }
+  .submit {
+    width: 100px;
+  }
+  .info-container {
+    font-size: 1rem;
+    font-weight: 900;
+  }
+}
+
+@media only screen and (max-width: 280px) {
+  #right {
+    width: 70vw;
+    height: 50vh;
+    margin-bottom: 10px;
+  }
+  #left {
+    width: 90vw;
+    height: 30vh;
+  }
+  .btn-container button {
+    width: 40px;
+    height: 50px;
+    margin: auto;
+    font-size: 8px;
+  }
+  #pic {
+    width: 130px;
+    height: 130px;
+  }
+  #form input {
+    width: 100px;
+    height: 20px;
+  }
+  #form textarea {
+    width: 80px;
+    height: 200px;
+  }
+  .submit {
+    width: 80px;
+  }
+  .info-container {
+    font-size: 0.9rem;
+    font-weight: 900;
+  }
+  .info-container {
+    font-size: 0.6rem;
+    font-weight: 900;
   }
 }
 
@@ -657,7 +992,7 @@ canvas {
 
 .info-page {
   z-index: 999;
-  width: 900px;
+  width: 80%;
   height: 600px;
   position: fixed;
   opacity: 1;
@@ -673,7 +1008,7 @@ canvas {
 .report-page {
   position: relative;
   z-index: 999;
-  width: 900px;
+  width: 80%;
   height: 600px;
   background: url(../img/background-from.jfif);
   background-size: cover;
@@ -738,7 +1073,6 @@ canvas {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  font-size: 1.2rem;
   font-weight: 900;
   line-height: 45px;
   text-transform: uppercase;
@@ -777,7 +1111,7 @@ a:active {
   font-size: 1.5rem;
   justify-content: center;
   align-items: center;
-  width: 550px;
+  width: 70%;
   max-height: 900px;
   margin: 0 auto;
   border: 2px solid rgba(225, 225, 225, 0.2);
@@ -794,15 +1128,13 @@ a:active {
 }
 
 #form input {
-  width: 500px;
-  height: 20px;
   margin: 20px 0 15px;
   border-radius: 40px;
   padding: 20px 45px 20px 20px;
   border: 2px solid rgba(225, 225, 225, 0.2);
   outline: none;
   background: transparent;
-  color: whitesmoke;
+  color: black;
   font-size: 16px;
 }
 
@@ -814,11 +1146,9 @@ a:active {
 }
 
 #form textarea {
-  width: 500px;
-  height: 200px;
   outline: none;
   background: transparent;
-  color: whitesmoke;
+  color: black;
   margin-top: 10px;
   border-radius: 40px;
   padding: 20px 45px 20px 20px;
@@ -830,11 +1160,11 @@ body::-webkit-scrollbar {
 }
 body::-webkit-scrollbar-track {
   background-color: #fafafa;
-  border-radius: 50%;
+  border-radius: 21px;
 }
 body::-webkit-scrollbar-thumb {
   background-image: linear-gradient(-45deg, #6a5af9, #d66efd);
-  border-radius: 50px;
+  border-radius: 21px;
 }
 
 #left::-webkit-scrollbar {
@@ -842,7 +1172,7 @@ body::-webkit-scrollbar-thumb {
 }
 #left::-webkit-scrollbar-track {
   background-color: #fafafa;
-  border-radius: 50%;
+  border-radius: 21px;
 }
 #left::-webkit-scrollbar-thumb {
   background-image: linear-gradient(-45deg, #6a5af9, #d66efd);
@@ -862,16 +1192,89 @@ textarea::-webkit-scrollbar-thumb {
 }
 
 .full-container {
-  height: 150vh;
+  height: 180vh;
   scroll-behavior: smooth;
+  position: relative;
   background-image: url("../img/background.jpg");
-  background-size: auto;
+  background-size: cover;
 }
 
 .down {
-  background-color: #24297c;
-  width: 100vw;
-  height: 50vh;
+  background-color: #3586ff;
+  width: 100%;
+  height: 40vh;
+  position: absolute;
+  bottom: 0;
+  z-index: 999999;
+  border-radius: 20px 20px 0 0;
+}
+
+.note {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1.5rem;
+  user-select: none;
+}
+
+.wave {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  width: 100%;
+  height: 30vh;
+  background: url(../img/wave.png);
+  background-size: 1000px 30vh;
+  z-index: -999;
+}
+
+.wave.wave1 {
+  animation: animate 30s linear infinite;
+  opacity: 1;
+  animation-delay: 0s;
+  bottom: 0;
+}
+
+.wave.wave2 {
+  animation: animate2 15s linear infinite;
+  opacity: 0.5;
+  animation-delay: -5s;
+  bottom: 10px;
+}
+
+.wave.wave3 {
+  animation: animate2 30s linear infinite;
+  opacity: 0.2;
+  animation-delay: -2s;
+  bottom: 15px;
+}
+
+.wave.wave4 {
+  animation: animate2 5s linear infinite;
+  opacity: 0.7;
+  animation-delay: -5s;
+  bottom: 20px;
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 1000px;
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: -1000px;
+  }
 }
 
 input::placeholder {
@@ -902,7 +1305,6 @@ textarea::placeholder {
 }
 
 .submit {
-  width: 300px;
   height: auto;
   margin-bottom: 20px;
 }

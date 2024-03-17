@@ -28,13 +28,27 @@ var info = document.querySelector(".fa-circle-info");
 var infoPage = document.querySelector(".info-page");
 var closeBtn = document.querySelector(".fa-xmark");
 var closeBtn2 = document.querySelector(".fa-xmark2");
+var clickTime = 0;
+
+function check() {
+  if (clickTime > 1) {
+    closeBtn.click();
+    closeBtn2.click();
+    clickTime = 0;
+  } else {
+  }
+}
 
 report.onclick = function () {
   reportPage.classList.remove("display");
+  check();
+  clickTime += 1;
 };
 
 info.onclick = function () {
   infoPage.classList.remove("display");
+  check();
+  clickTime += 1;
 };
 
 closeBtn.onclick = function () {
@@ -61,8 +75,7 @@ function selectFrame(selectedIndex) {
           originalWidth * scale,
           originalHeight * scale
         );
-        context2.clearRect(0, 0, canvas2.width, canvas2.height);
-        context2.drawImage(frame, 0, 0, canvas2.width, canvas2.height);
+        context.drawImage(frame, 0, 0, canvas.width, canvas.height);
       } else {
       }
     });
