@@ -32,6 +32,7 @@ var clickTime = 0;
 var zoomIn = document.getElementById("zoom-in");
 var zoomOut = document.getElementById("zoom-out");
 var zoomLevel = document.querySelector(".zoom-level");
+var zoomSetting = document.querySelector(".setting");
 var level = 50;
 var previousValue = 50;
 
@@ -158,6 +159,7 @@ function chooseFile() {
 
 imgOutput.onload = function () {
   draw = false;
+  zoomSetting.classList.remove("display2");
 };
 
 downloadBtn.onclick = function () {
@@ -227,7 +229,25 @@ canvas2.addEventListener("mousedown", function (e) {
   startY = e.clientY;
 });
 
+canvas2.addEventListener("ontouchstart", function (e) {
+  isDragging = true;
+  startX = e.clientX;
+  startY = e.clientY;
+});
+
 canvas2.addEventListener("mousemove", function (e) {
+  if (isDragging) {
+    var deltaX = e.clientX - startX;
+    var deltaY = e.clientY - startY;
+    translateX += deltaX;
+    translateY += deltaY;
+    redrawImage();
+    startX = e.clientX;
+    startY = e.clientY;
+  }
+});
+
+canvas2.addEventListener("ontouchmove", function (e) {
   if (isDragging) {
     var deltaX = e.clientX - startX;
     var deltaY = e.clientY - startY;
@@ -276,4 +296,8 @@ zoomOut.onclick = function () {
   updateZoom(scale * scalePoint);
   level -= 1;
   zoomLevel.value = level;
+};
+
+window.onload = function () {
+  zoomSetting.classList.add("display2");
 };
