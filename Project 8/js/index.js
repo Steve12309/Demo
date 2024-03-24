@@ -32,7 +32,7 @@ var clickTime = 0;
 var zoomIn = document.getElementById("zoom-in");
 var zoomOut = document.getElementById("zoom-out");
 var zoomLevel = document.querySelector(".zoom-level");
-var zoomSetting = document.querySelector(".setting");
+var zoomSetting = document.querySelector(".display2");
 var level = 50;
 var previousValue = 50;
 
@@ -159,7 +159,7 @@ function chooseFile() {
 
 imgOutput.onload = function () {
   draw = false;
-  zoomSetting.classList.remove("display2");
+  zoomSetting.classList.remove("hidden");
 };
 
 downloadBtn.onclick = function () {
@@ -300,5 +300,5 @@ zoomOut.onclick = function () {
 };
 
 window.onload = function () {
-  zoomSetting.classList.add("display2");
+  zoomSetting.classList.add("hidden");
 };
