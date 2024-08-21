@@ -86,7 +86,7 @@ app.post("/uploadImg", upload.single("image"), async (req, res) => {
         const info = await transporter.sendMail({
           from: '"BeYourself Education Platform"',
           to: emailUser,
-          subject: "SendMail",
+          subject: "Món quà nhỏ từ câu lạc bộ Tin học Its Future",
           template: "sendimg",
           attachments: [
             {
