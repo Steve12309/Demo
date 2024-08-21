@@ -1,7 +1,62 @@
-<img
-  src="../../../img/template1.jpg"
-  alt="Template1"
-  width="800px"
-  height="500px"
-/>
-<h1>Template 1</h1>
+<div class="img-container">
+  <img class="clientImg" src="../../../img/template3.jpg" alt="Template 3" />
+  <form id="infoForm">
+    <textarea
+      placeholder="Nhập gì đó vào đây..."
+      id="content"
+      name="content"
+      rows="5"
+      class="msg"
+    ></textarea>
+    <input type="email" class="email" placeholder="Nhập email của bạn" />
+    <button type="submit" class="button button--piyo">
+      <div class="button__wrapper">
+        <span class="button__text">Tải ảnh về</span>
+      </div>
+      <div class="characterBox">
+        <div class="character wakeup">
+          <div class="character__face"></div>
+        </div>
+        <div class="character wakeup">
+          <div class="character__face"></div>
+        </div>
+        <div class="character">
+          <div class="character__face"></div>
+        </div>
+      </div>
+    </button>
+  </form>
+</div>
+
+<div class="templateChoices-container">
+  <div class="templateChoice-container">
+    <img
+      class="choiceImg"
+      src="../../../img/template1.jpg"
+      alt="Template 1"
+      number="1"
+      onclick="changeImg(this)"
+    />
+  </div>
+  <div class="templateChoice-container">
+    <img
+      class="choiceImg"
+      src="../../../img/template2.jpg"
+      alt="Template 2"
+      number="2"
+      onclick="changeImg(this)"
+    />
+  </div>
+  <div class="templateChoice-container">
+    <img
+      class="choiceImg"
+      src="../../../img/template3.jpg"
+      alt="Template 3"
+      number="3"
+      onclick="changeImg(this)"
+    />
+  </div>
+</div>
+
+<canvas id="canvas" style="display: none;"></canvas>
+<a id="downloadLink" href="" style="display: none;">Download Image</a>
